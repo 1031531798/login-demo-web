@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,26 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <body>
-        <div class="sign-up-form">
-            <img src="img/icons8-user-96.png">
-            <h1>Sign Up Now</h1>
-            <form action="/login" method="get">
-                <input type="email" id="email" class="input-box" placeholder="你 的 邮 箱">
-                <div id="email-box"></div>
-                <input type="password" class="input-box" placeholder="你 的 密 码">
-                <p><span id="checkbox-span"><input type="checkbox"></span> 同意服务条款</p>
-                <button type="button" class="signup-btn" onclick="check()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
-                <hr>
-                <p class="or">或者</p>
-                <button type="button" class="twitter-btn">微&nbsp;&nbsp;信&nbsp;&nbsp;登&nbsp;&nbsp;录</button>
-                <p>没有账号吗?<a href="#">点击注册</a></p>
-            </form>
-        </div>
-    </body>
+    <div class="sign-up-form">
+        <img src="img/icons8-user-96.png">
+        <h1>Sign Up Now</h1>
+        <form action="/api/login" method="get">
+            <input type="email" id="email" name="email" class="input-box" placeholder="你 的 邮 箱">
+            <div id="email-box"></div>
+            <input type="password" class="input-box" placeholder="你 的 密 码">
+            <p><span id="checkbox-span"><input type="checkbox"></span> 同意服务条款</p>
+            <button type="button" class="signup-btn" onclick="check()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+            <hr>
+            <p class="or">或者</p>
+            <button type="button" class="twitter-btn">微&nbsp;&nbsp;信&nbsp;&nbsp;登&nbsp;&nbsp;录</button>
+            <p>没有账号吗?<a href="#">点击注册</a></p>
+        </form>
+    </div>
     <footer>
         <script src="js/reg.js"></script>
     </footer>
 </body>
+
 </html>
