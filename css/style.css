@@ -27,7 +27,7 @@ body {
     border-radius: 20px;
     padding: 10px;
     margin: 10px 0;
-    width: 90%;
+    width: 80%;
     border: 1px solid #999;
     outline: none;
 }
@@ -68,7 +68,10 @@ hr {
 }
 
 img {
-    width: 50px;
+    width: 20px;
+    position: relative;
+    top: 5px;
+    right: 8px;
 }
 
 #checkbox-span {
@@ -78,9 +81,9 @@ img {
 
 #email-box {
     position: relative;
-    left: -74px;
+    left: -57px;
     color: red;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .input-box:focus {
