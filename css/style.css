@@ -48,10 +48,6 @@ button {
     background-color: #1c8adb;
 }
 
-.twitter-btn {
-    background-color: #21afde;
-}
-
 a {
     text-decoration: none;
 }
@@ -67,7 +63,7 @@ hr {
     margin: -21px auto 10px;
 }
 
-img {
+.login-ui {
     width: 20px;
     position: relative;
     top: 5px;
@@ -88,4 +84,9 @@ img {
 
 .input-box:focus {
     border-color: #1c8adb;
+}
+
+.icon {
+    width: 40px;
+    margin: 10px 10px 0px 10px;
 }

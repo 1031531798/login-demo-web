@@ -14,19 +14,23 @@
         <h1>SIGN ⚓ UP</h1>
         <form action="/api/login" method="POST">
             <div>
-                <label for="email"><img src="img/icons8-user-96.png"></label>
+                <label for="email"><img src="img/icons8-user-96.png" class="login-ui"></label>
                 <input type="email" id="email" name="email" class="input-box" placeholder="你 的 邮 箱">
                 <div id="email-box"></div>
             </div>
             <div>
-                <label for="password"><img src="img/icons8-password-1-96.png"></label>
+                <label for="password"><img src="img/icons8-password-1-96.png" class="login-ui"></label>
                 <input type="password" id="password" name="password" class="input-box" placeholder="你 的 密 码">
             </div>
             <p><span id="checkbox-span"><input type="checkbox"></span> 同意服务条款</p>
             <button type="button" class="signup-btn" onclick="check()">登&emsp;录</button>
             <hr>
-            <p class="or">或者</p>
-            <button type="button" class="twitter-btn">微&ensp;信&ensp;登&ensp;录</button>
+            <div>
+                <img src="img/icons8-qq-96.png" class="icon" alt="">
+                <img src="img/iconfinder_cssi_wechat_214715.png" class="icon" alt="">
+                <img src="img/icons8-weibo-96.png" class="icon" alt="">
+                <img src="img/icons8-github-100.png" class="icon" alt="">
+            </div>
             <p>没有账号吗?<a href="#">点击注册</a></p>
         </form>
     </div>
