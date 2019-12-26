@@ -14,7 +14,8 @@ body {
     padding: 20px;
     margin: 8% auto 0;
     text-align: center;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 .sign-up-form h1 {
@@ -67,8 +68,7 @@ hr {
 }
 
 img {
-    width: 70px;
-    margin-top: -50px;
+    width: 50px;
 }
 
 #checkbox-span {
