@@ -15,12 +15,13 @@
         <form action="/api/login" method="POST">
             <div>
                 <label for="email"><img src="img/icons8-user-96.png" class="login-ui"></label>
-                <input type="email" id="email" name="email" class="input-box" placeholder="你 的 邮 箱">
+                <input type="email" id="email" name="email" class="input-box" placeholder="你 的 邮 箱" maxlength="64">
                 <div id="email-box"></div>
             </div>
             <div>
                 <label for="password"><img src="img/icons8-password-1-96.png" class="login-ui"></label>
-                <input type="password" id="password" name="password" class="input-box" placeholder="你 的 密 码">
+                <input type="password" id="password" name="password" class="input-box" placeholder="你 的 密 码" maxlength="64">
+                <div id="password-box"></div>
             </div>
             <p><span id="checkbox-span"><input type="checkbox"></span> 同意服务条款</p>
             <button type="button" class="signup-btn" onclick="check()">登&emsp;录</button>

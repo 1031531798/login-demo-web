@@ -77,9 +77,20 @@ hr {
 
 #email-box {
     position: relative;
-    left: -57px;
+    width: 300px;
+    left: 45px;
     color: red;
     font-size: 12px;
+    text-align: left;
+}
+
+#password-box {
+    position: relative;
+    width: 300px;
+    left: 45px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
 }
 
 .input-box:focus {
