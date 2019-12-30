@@ -5,6 +5,9 @@ body {
     background-image: url(../img/wallhaven-4geqpl.jpg);
     background-size: cover;
     background-position: center;
+    background-size: 1920px 969px;
+    background-attachment: fixed;
+    overflow-y: hidden;
 }
 
 .sign-up-form {
@@ -16,6 +19,10 @@ body {
     text-align: center;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    opacity: 0;
+    transition: 2s;
+    position: relative;
+    top: 830px;
 }
 
 .sign-up-form h1 {
