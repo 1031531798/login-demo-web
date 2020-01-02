@@ -95,7 +95,7 @@ window.onload = function() {
             } else {
                 return false;
             }
-        }
+    }
         //入场动画效果
     document.getElementsByClassName('sign-up-form')[0].style.opacity = 1;
 }
