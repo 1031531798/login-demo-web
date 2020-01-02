@@ -1,23 +1,23 @@
-window.onload = function() {
+window.onload = function () {
     //邮箱验证
     var email = document.getElementById("username");
-    email.onblur = function() {
-            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            var obj = email;
-            if (obj.value === "") { //输入不能为空
-                console.log("输入不能为空!");
-                document.getElementById("email-box").innerHTML = "邮箱地址不能为空";
-                return false;
-            } else if (!reg.test(obj.value)) { //正则验证不通过，格式不对
-                console.log("验证不通过!");
-                document.getElementById("email-box").innerHTML = "邮箱地址格式有误";
-                return false;
-            } else {
-                document.getElementById("email-box").innerHTML = ""
-                return true;
-            }
+    email.onblur = function () {
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var obj = email;
+        if (obj.value === "") { //输入不能为空
+            console.log("输入不能为空!");
+            document.getElementById("email-box").innerHTML = "邮箱地址不能为空";
+            return false;
+        } else if (!reg.test(obj.value)) { //正则验证不通过，格式不对
+            console.log("验证不通过!");
+            document.getElementById("email-box").innerHTML = "邮箱地址格式有误";
+            return false;
+        } else {
+            document.getElementById("email-box").innerHTML = ""
+            return true;
         }
-        //密码验证
+    }
+    //密码验证
     // var password = document.getElementById('password');
     // password.onblur = function() {
     //     //创建正则表达式
@@ -44,10 +44,10 @@ window.onload = function() {
             var request = new XMLHttpRequest();
             var form = document.getElementById('form');
             var fd = new FormData(form);
-            request.addEventListener('load', function() {
+            request.addEventListener('load', function () {
                 console.log('成功')
             })
-            request.addEventListener('error', function() {
+            request.addEventListener('error', function () {
                 console.log('失败')
             })
             request.open('POST', '/api/login/userLogin', true);
@@ -55,7 +55,9 @@ window.onload = function() {
         } else {
             return false;
         }
+        //入场动画效果
+        document.getElementsByClassName('sign-up-form')[0].style.opacity = 1;
+        document.getElementsByClassName('sign-up-form')[0].style.top = 0 + 'px';
     }
-    document.getElementsByClassName('sign-up-form')[0].style.opacity = 1;
-    document.getElementsByClassName('sign-up-form')[0].style.top = 0 + 'px';
+
 }
