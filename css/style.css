@@ -7,7 +7,6 @@ body {
     background-position: center;
     background-size: 1920px 969px;
     background-attachment: fixed;
-    overflow-y: hidden;
 }
 
 .sign-up-form {
@@ -85,7 +84,7 @@ hr {
 #email-box {
     position: relative;
     width: 300px;
-    left: 45px;
+    left: 40px;
     color: red;
     font-size: 12px;
     text-align: left;
@@ -94,7 +93,16 @@ hr {
 #password-box {
     position: relative;
     width: 300px;
-    left: 45px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+#two_password-box {
+    position: relative;
+    width: 300px;
+    left: 40px;
     color: red;
     font-size: 12px;
     text-align: left;
@@ -108,3 +116,4 @@ hr {
     width: 40px;
     margin: 10px 10px 0px 10px;
 }
+

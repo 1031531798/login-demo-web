@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="css/regist.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,13 +15,16 @@
         <form action="/api/login" method="POST" id="form">
             <div>
                 <input type="email" id="email" name="email" class="input-box" placeholder="邮 箱 账 号" maxlength="64">
-                <div id="email-box"><img src="" alt="" id="check_img1"></div>
+                <div id="email-box" class="reminder"></div>
             </div>
             <div>
+
                 <input type="password" id="password" name="password" class="input-box" placeholder="输入8位以上包含 数字,英文的密码" maxlength="64">
-                <div id="password-box"><img src="" alt="" id="check_img2"></div>
+                <div id="password-box" class="reminder"></div>
+            </div>
+            <div>
                 <input type="password" id="two_password" name="password" class="input-box" placeholder="再次输入密码" maxlength="64">
-                <div id="two_password-box"><img src="#" alt="" id="check_img3"></div>
+                <div id="two_password-box" class="reminder"></div>
             </div>
             <p><span id="checkbox-span"><input type="checkbox"></span> 同意服务条款</p>
             <button type="button" class="signup-btn" id="login">注&emsp;册</button>
@@ -32,12 +35,12 @@
                 <img src="img/icons8-weibo-96.png" class="icon" alt="">
                 <img src="img/icons8-github-100.png" class="icon" alt="">
             </div>
-            <p>有账号<a href="#">点击登录</a></p>
+            <p>有账号<a href="index.html">点击登录</a></p>
         </form>
     </div>
     <footer>
-        <script src="js/regist.js"></script>
+        <script src="js/regist_change.js"></script>
+        <script src="js/animation.js"></script>
     </footer>
 </body>
-
 </html>
