@@ -20,7 +20,6 @@ window.onload = function () {
     document.getElementById("login").onclick = function check() {
         //创建判断
         if (document.getElementById("email-box").innerHTML == "" && document.getElementById("password-box").innerHTML == "") {
-
             //AJAX部分
             var request = new XMLHttpRequest();
             var form = document.getElementById('form');
@@ -40,4 +39,5 @@ window.onload = function () {
     //入场动画效果
     document.getElementsByClassName('sign-up-form')[0].style.opacity = 1;
     document.getElementsByClassName('sign-up-form')[0].style.top = 0 + 'px';
+    entrance();
 }
