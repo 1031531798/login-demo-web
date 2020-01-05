@@ -36,8 +36,5 @@ window.onload = function () {
             return false;
         }
     }
-    //入场动画效果
-    document.getElementsByClassName('sign-up-form')[0].style.opacity = 1;
-    document.getElementsByClassName('sign-up-form')[0].style.top = 0 + 'px';
     entrance();
 }
