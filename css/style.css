@@ -55,9 +55,13 @@ button {
 }
 
 a {
+    color: rgb(13, 140, 172);
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: underline;
+}
 hr {
     margin-top: 20px;
     width: 80%;
@@ -115,5 +119,9 @@ hr {
 .icon {
     width: 40px;
     margin: 10px 10px 0px 10px;
+}
+
+#terms{
+    font-size: 12px;
 }
 
