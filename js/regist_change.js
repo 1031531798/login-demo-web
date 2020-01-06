@@ -1,5 +1,6 @@
 window.onload = function () {
     var flag = false;
+    //用户名验证
     //邮箱验证
     var email = document.getElementById("email");
     flag = email.onblur = function () {
@@ -16,9 +17,27 @@ window.onload = function () {
             document.getElementById("email-box").style.color = "red";
             return false;
         } else {
-            document.getElementById("email-box").innerHTML = "<img src='img/ok.png'>  邮箱地址可用"
-            document.getElementById("email-box").style.color = "green";
-            return true;
+            // $.ajax 方法校验邮箱是否已注册
+            $.ajax({
+                url: "/api/check/email",
+                type: "GET",
+                data: "email=" + email.value,
+                dataType: "text",
+                async: false,
+                success: function () {
+                    document.getElementById("email-box").innerHTML = "<img src='img/ok.png'>  邮箱地址可用"
+                    document.getElementById("email-box").style.color = "green";
+                    flag = true;
+                },
+                statusCode: {
+                    403: function () {
+                        document.getElementById("email-box").innerHTML = "<img src='img/error.png'>  邮箱地址已注册";
+                        document.getElementById("email-box").style.color = "red";
+                        flag = false;
+                    }
+                }
+            })
+            return flag;
         }
     }
     var password = document.getElementById('password');
