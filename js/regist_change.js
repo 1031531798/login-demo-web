@@ -93,12 +93,12 @@ window.onload = function () {
     }
 
     function getUser() {
-        console.log($('#form').serializeJSON());
-        console.log(JSON.stringify($('#form').serializeJSON()));
-        return JSON.stringify($('#form').serializeJSON());
+        console.log($('#regist_form').serializeJSON());
+        console.log(JSON.stringify($('#regist_form').serializeJSON()));
+        return JSON.stringify($('#regist_form').serializeJSON());
     }
 
-    document.getElementById("regist").onclick = function check() {
+    document.getElementById("regist").onclick = function regist_check() {
         //创建判断
         if (flag) {
             var data = getUser();

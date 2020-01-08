@@ -12,7 +12,7 @@
 <body>
     <div class="sign-up-form">
         <h1>SIGN ⚓ UP</h1>
-        <form action="/api/login" method="POST" id="form">
+        <form action="/api/login" method="POST" id="login_form">
             <div>
                 <label for="username"><img src="img/icons8-user-96.png" class="login-ui"></label>
                 <input type="username" id="username" name="username" class="input-box" placeholder="邮箱/用户名" maxlength="64">
@@ -35,6 +35,8 @@
         <p>没有账号吗?<a href="regist.html">点击注册</a></p>
     </div>
     <footer>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery.serializejson.js"></script>
         <script src="js/login_change.js"></script>
         <script src="js/animation.js"></script>
     </footer>
