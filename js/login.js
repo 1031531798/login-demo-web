@@ -9,14 +9,16 @@ window.onload = function () {
             var OK = 200; // status 200 is a successful return.
             if (xhr.readyState === DONE) {
                 if (xhr.status === OK) {
+                     //判断是否勾选保存用户名
+                    autoUesrname();
                     var result = JSON.parse(xhr.responseText)
                     alert(result.msg); // 'This is the output.'
                 } else {
                     alert('Error: ' + xhr.status); // An error occurred during the request.
                 }
             }
-
         }
-        entrance();
     })
+    //写入用户名
+    setUser ();
 }

@@ -114,5 +114,4 @@ window.onload = function () {
             });
         }
     }
-    entrance();
 }
