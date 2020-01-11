@@ -5,10 +5,11 @@ function autoUesrname (){
         if(saveUser){
              //获取用户名
             var username = document.getElementById('username').value;
-            var userCookie = document.cookie="username="+username; "expires=7";
+            var userCookie = document.cookie = "username="+username; "expires=7";
         }
     }
 }
+//勾选保存用户名
 function setUser (){
     if(document.cookie){
         //获取cookie值
@@ -24,5 +25,14 @@ function setUser (){
     }else{
         return false;
     }
-    
+}
+function autoLogin(){
+    document.getElementById('auto').onclick = function (){
+        var autoCondition = $('#auto').prop('checked');
+        console.log(autoCondition)
+        if(autoCondition){
+            var autoCookie = document.cookie = autoCondition; "expires=7";
+            console.log(autoCondition)
+        }
+    }
 }

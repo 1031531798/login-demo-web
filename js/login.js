@@ -1,4 +1,4 @@
-window.onload = function () {
+function login() {
     $("#login").click(function () {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'api/login/userLogin', true);
