@@ -11,7 +11,9 @@ function login() {
                 if (xhr.status === OK) {
                      //判断是否勾选保存用户名
                     autoUesrname();
-                    var result = JSON.parse(xhr.responseText)
+                    var result = JSON.parse(xhr.responseText);
+                    //登录成功！跳转到主页
+                    window.location.href="index.html";
                     alert(result.msg); // 'This is the output.'
                 } else {
                     alert('Error: ' + xhr.status); // An error occurred during the request.

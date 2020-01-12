@@ -5,5 +5,6 @@ window.onload = function (){
     switch(title){
         case "Login" : login();autoLogin();break;
         case "regist" : registChange();break;
+        case "home" : Carousel();break;
     }
 }
