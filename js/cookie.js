@@ -15,13 +15,13 @@ function setUser (){
         //获取cookie值
         var username = document.cookie;
         //取得=的下标
-        var frist = username . lastIndexOf("=")
+        var frist = username.lastIndexOf("=");
         //获得用户名值
-        var data = username . substring(frist + 1,username.length);
+        var data = username.substring(frist + 1,username.length);
         //设置用户名
-        $('#username').val(data)
+        $('#username').val(data);
         //勾选保存用户名
-        $('#save').attr('checked','checked')
+        $('#save').attr('checked','checked');
     }else{
         return false;
     }
@@ -29,10 +29,12 @@ function setUser (){
 function autoLogin(){
     document.getElementById('auto').onclick = function (){
         var autoCondition = $('#auto').prop('checked');
-        console.log(autoCondition)
         if(autoCondition){
             var autoCookie = document.cookie = autoCondition; "expires=7";
-            console.log(autoCondition)
         }
     }
+}
+//保存token
+function cookies (tokens){
+    var tokenCookie = document.cookie = "token="+tokens; "expires=7";
 }

@@ -1,4 +1,8 @@
-function login() {
+//获取cookie中的token
+var token = $.cookie('token');
+if(token){
+    console.log(token)
+}else{
     $("#login").click(function () {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'api/login/userLogin', true);
@@ -12,6 +16,9 @@ function login() {
                      //判断是否勾选保存用户名
                     autoUesrname();
                     var result = JSON.parse(xhr.responseText);
+                    token = result.token;
+                    //保存token
+                    cookies (token)
                     //登录成功！跳转到主页
                     window.location.href="index.html";
                     alert(result.msg); // 'This is the output.'
@@ -24,3 +31,4 @@ function login() {
     //写入用户名
     setUser ();
 }
+

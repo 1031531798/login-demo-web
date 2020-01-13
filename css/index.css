@@ -32,7 +32,6 @@ a{
 nav{
     display:flex;
     flex-direction:row;
-    cursor:default;
     z-index:10;
     height:40px;
 }
@@ -45,12 +44,13 @@ nav{
     text-align:center;
     line-height:40px;
     z-index: 10;
-    overflow:hidden;
 }
 .nav:hover{
     background:rgba(22, 22, 22, 0.5);
-    height:300px;
-    transition: height 0.7s ease ;
+}
+.nav_text{
+    display: none;
+    background:rgba(22, 22, 22, 0.5);
 }
 aside{
     width:100px;
