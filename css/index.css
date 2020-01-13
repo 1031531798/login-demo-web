@@ -9,7 +9,10 @@ body{
 header{
     display:flex;
     background:#C9BE62;
-    flex-direction:column;
+}
+#logout{
+    position: relative;
+    
 }
 a{
     text-decoration:none;

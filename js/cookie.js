@@ -38,3 +38,7 @@ function autoLogin(){
 function cookies (tokens){
     var tokenCookie = document.cookie = "token="+tokens; "expires=7";
 }
+//登出以消除token
+$('#logout').click(function(){
+    $.cookie("token", "", {expires: -1});
+})

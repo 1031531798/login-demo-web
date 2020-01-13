@@ -134,6 +134,8 @@ function registChange () {
                 dataType: "json",
                 contentType: "application/json",
                 success: function (data) {
+                    //注册成功！跳转登录
+                    window.location.href="login.html";
                     alert(data.message);
                 }
             });
