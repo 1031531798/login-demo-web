@@ -81,6 +81,15 @@ hr {
     top: 2px;
 }
 
+#name-box {
+    position: relative;
+    width: 300px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
 #email-box {
     position: relative;
     width: 300px;
