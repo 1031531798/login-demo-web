@@ -1,4 +1,4 @@
-window.onload = function () {
+function registChange () {
     var flag = false;
     //用户名验证
     //邮箱验证
@@ -37,7 +37,7 @@ window.onload = function () {
                     }
                 }
             })
-            return flag;
+            return false;
         }
     }
     var password = document.getElementById('password');
@@ -99,8 +99,11 @@ window.onload = function () {
     }
 
     document.getElementById("regist").onclick = function regist_check() {
+        var user_color = document.getElementById("email-box").style.color;
+        var password_color = document.getElementById("password-box").style.color;
+        var two_password_color = document.getElementById("two_password-box").style.color;
         //创建判断
-        if (flag) {
+        if (user_color == "green" && password_color == "green" && two_password_color == "green") {
             var data = getUser();
             $.ajax({
                 type: "POST",

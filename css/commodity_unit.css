@@ -1,0 +1,29 @@
+#commodity_1{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 19%;
+    background:rgb(231, 229, 229);
+}
+.commodity_unit{
+    width: 200px;;
+    height: 300px;
+    background: rgb(241, 240, 239);
+    padding: 10px;
+    margin: 10px;
+}
+.commodity_img{
+    width: 200px;
+    height: 230px;
+}
+.commodity_text{
+    font-size: 18px;
+}
+.commodity_text2{
+    font-size: 14px;
+}
+.commodity_price{
+    text-align: end;
+    color: tomato;
+}
