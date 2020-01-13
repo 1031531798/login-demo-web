@@ -24,14 +24,14 @@ window.onload = function () {
                 data: "email=" + email.value,
                 dataType: "text",
                 async: false,
-                success: function () {
-                    document.getElementById("email-box").innerHTML = "<img src='img/ok.png'>  邮箱地址可用"
-                    document.getElementById("email-box").style.color = "green";
-                    flag = true;
-                },
-                statusCode: {
-                    403: function () {
-                        document.getElementById("email-box").innerHTML = "<img src='img/error.png'>  邮箱地址已注册";
+                success: function (msg) {
+                    var result = JSON.parse(msg);
+                    if (result.code == "200") {
+                        document.getElementById("email-box").innerHTML = "<img src='img/ok.png'>  邮箱可注册！";
+                        document.getElementById("email-box").style.color = "green";
+                        flag = true;
+                    } else {
+                        document.getElementById("email-box").innerHTML = "<img src='img/error.png'>  " + result.message;
                         document.getElementById("email-box").style.color = "red";
                         flag = false;
                     }
