@@ -1,27 +1,17 @@
-function registChange () {
+function registChange() {
     var flag = false;
     //用户名验证
     var name = document.getElementById("name");
-    name.onblur = function (){
-        $.ajax({
-            url: "/api/check/name",
-            type: "GET",
-            data: "name=" + name.value,
-            dataType: "text",
-            async: false,
-            success: function (msg) {
-                var result = JSON.parse(msg);
-                if (result.code == "200") {
-                    $('#name-box').html("<img src='img/ok.png'>  用户名可用!");
-                    $('#name-box').css('color','green');
-                    flag = true;
-                } else {
-                    $('#name-box').html("<img src='img/error.png'>  " + result.message);
-                    $('#name-box').css('color','red');
-                    flag = false;
-                }
-            }
-        })
+    name.onblur = function () {
+        if (name === "") {
+            document.getElementById("name-box").innerHTML = "<img src='img/error.png'>  用户名不能为空";
+            document.getElementById("name-box").style.color = "red";
+            flag = false;
+        } else {
+            document.getElementById("name-box").innerHTML = "<img src='img/ok.png'>";
+            document.getElementById("name-box").style.color = "green";
+            flag = true;
+        }
     }
     //邮箱验证
     var email = document.getElementById("email");
@@ -135,7 +125,7 @@ function registChange () {
                 contentType: "application/json",
                 success: function (data) {
                     //注册成功！跳转登录
-                    window.location.href="login.html";
+                    window.location.href = "login.html";
                     alert(data.message);
                 }
             });
