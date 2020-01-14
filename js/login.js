@@ -1,8 +1,8 @@
 //获取cookie中的token
 var token = $.cookie('token');
-if(token){
-    console.log(token)
-}else{
+if (token != null) {
+    window.location.href = "index.html";
+} else {
     $("#login").click(function () {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'api/login/userLogin', true);
@@ -13,22 +13,18 @@ if(token){
             var OK = 200; // status 200 is a successful return.
             if (xhr.readyState === DONE) {
                 if (xhr.status === OK) {
-                     //判断是否勾选保存用户名
+                    //判断是否勾选保存用户名
                     autoUesrname();
                     var result = JSON.parse(xhr.responseText);
                     token = result.token;
                     //保存token
-                    cookies (token)
+                    saveCookie(token)
                     //登录成功！跳转到主页
-                    window.location.href="index.html";
-                    alert(result.msg); // 'This is the output.'
+                    window.location.href = "index.html";
                 } else {
-                    alert('Error: ' + xhr.status); // An error occurred during the request.
+                    alert('Error: ' + xhr.message); // An error occurred during the request.
                 }
             }
         }
     })
-    //写入用户名
-    setUser ();
 }
-
