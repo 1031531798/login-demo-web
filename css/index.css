@@ -4,6 +4,7 @@ body {
     font-family: 宋体;
     -webkit-user-select: none;
     overflow-x: hidden;
+    -webkit-font-smoothing;
 }
 
 header {
@@ -49,35 +50,75 @@ nav {
     text-align: center;
     line-height: 40px;
     z-index: 10;
+    overflow: hidden;
+}
+
+.nav_text {
+    transition: height 0.7s;
+    height: 0px;
 }
 
 .nav:hover {
     background: rgba(22, 22, 22, 0.5);
 }
 
-.nav_text {
-    display: none;
+#rmtj:hover {
     background: rgba(22, 22, 22, 0.5);
+    height: 40px;
+}
+
+#sgyp:hover {
+    background: rgba(22, 22, 22, 0.5);
+    height: 160px;
+}
+
+#jmcq:hover {
+    background: rgba(22, 22, 22, 0.5);
+    height: 160px;
+}
+
+#drcp:hover {
+    background: rgba(22, 22, 22, 0.5);
+    height: 160px;
+}
+
+#mscp:hover {
+    background: rgba(22, 22, 22, 0.5);
+    height: 160px;
+}
+
+#jrwm:hover {
+    background: rgba(22, 22, 22, 0.5);
+    height: 160px;
 }
 
 aside {
-    width: 100px;
-    height: 300px;
+    width: 40px;
+    height: auto;
     border: 1px solid red;
     position: fixed;
+    left: 320px;
     top: 300px;
+    white-space: normal;
+    z-index: 100;
+    font-size: 14px;
 }
 
 .side {
-    width: 200;
+    width: 40px;
     height: 50px;
     text-align: center;
-    line-height: 50px;
+    transition: background 0.2s;
 }
 
 .side:hover {
-    background: coral;
+    background: rgba(255, 127, 80, 0.5);
     font-weight: bolder;
+}
+
+.side_text {
+    position: relative;
+    top: 8px;
 }
 
 h1 {

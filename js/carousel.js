@@ -12,7 +12,7 @@ function carousel() {
     if (token != null) {
         $("#welcome").show(userDetails(token));
         $("#sigin").hide();
-        $("#welcome a").click(function() {
+        $("#welcome a").click(function () {
             $.ajax({
                 url: "/api/login/userLogout",
                 type: "GET",
@@ -129,7 +129,4 @@ function soTime() {
 
 function stopTime() {
     clearInterval(t)
-}
-document.getElementById('Carousel').onmouseover = function () {
-    console.log('id')
 }
