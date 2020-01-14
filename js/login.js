@@ -1,7 +1,7 @@
 //获取cookie中的token
 var token = $.cookie('token');
 if (token != null) {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 } else {
     $("#login").click(function () {
         var xhr = new XMLHttpRequest();
@@ -13,16 +13,18 @@ if (token != null) {
             var OK = 200; // status 200 is a successful return.
             if (xhr.readyState === DONE) {
                 if (xhr.status === OK) {
-                    //判断是否勾选保存用户名
-                    autoUesrname();
                     var result = JSON.parse(xhr.responseText);
-                    token = result.token;
-                    //保存token
-                    saveCookie(token)
-                    //登录成功！跳转到主页
-                    window.location.href = "index.html";
+                    if (result.code === "200") {
+                        token = result.token;
+                        //保存token
+                        saveCookie(token)
+                        //登录成功！跳转到主页
+                        window.location.href = "../index.html";
+                    } else {
+                        alert('Error: ' + result.message);
+                    }
                 } else {
-                    alert('Error: ' + xhr.message); // An error occurred during the request.
+                    alert('Error: ' + xhr.msg); // An error occurred during the request.
                 }
             }
         }
