@@ -43,7 +43,6 @@ nav {
 
 .nav {
     position: relative;
-    flex-basis: 12;
     background: #98AFC7;
     width: 350px;
     height: 40px;
@@ -51,11 +50,11 @@ nav {
     line-height: 40px;
     z-index: 10;
     overflow: hidden;
+    transition: all 0.7s;
 }
 
-.nav_text {
-    transition: height 0.7s;
-    height: 0px;
+.nav_text{
+    height: 40px;
 }
 
 .nav:hover {
