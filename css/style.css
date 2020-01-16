@@ -55,9 +55,10 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
+
 hr {
     margin-top: 20px;
     width: 80%;
@@ -126,16 +127,16 @@ hr {
     margin: 10px 10px 0px 10px;
 }
 
-#terms{
+#terms {
     font-size: 12px;
 }
 
-#autoText{
+#autoText {
     position: relative;
     top: -3px;
 }
 
-#saveText{
+#saveText {
     position: relative;
     top: -3px;
 }
