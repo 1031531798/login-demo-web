@@ -1,13 +1,19 @@
 body {
 	margin: 0;
 	padding: 0;
-	box-shadow: 15px;
 	-ms-user-select: none;
 	font-family: 'Poppins', sans-serif;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+}
+
+#user_content{
+	display: flex;
+	flex-direction: row;
 	align-items: stretch;
+	height: 100%;
 }
 
 header {
@@ -29,10 +35,10 @@ header div {
 
 aside {
 	width: 300px;
-	height: 865px;
+	height: 837px;
 	display: flex;
 	justify-content: center;
-	background-color: rgb(236, 214, 171);
+	background-color:pink;
 }
 
 #ui_side_top {
@@ -114,12 +120,9 @@ aside {
 	cursor: pointer;
 }
 
-#user_content{
-	display: flex;
-	height: 839px;
-	width: 1620px;
-	background-image: url("../img/user_content.jpg");
+#user_style{
+	height: 100%;
+	background: orange;
 	background-repeat: no-repeat;
-	flex-direction: row;
 }
 

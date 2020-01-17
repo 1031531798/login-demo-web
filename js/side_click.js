@@ -12,7 +12,11 @@ function side_click() {
 	//获取滚动条位置为以后侧栏定位做准备
 	$(window).scroll(function () {
 		var top = $(window).scrollTop();
-		console.log(top)
-	});
+		if(top > 100){
+			$('#move_top').css('display',"block")
+		}else{
+			$('#move_top').css('display',"none")
+		}
+	})
 	$('.side').click(style_change)
 }

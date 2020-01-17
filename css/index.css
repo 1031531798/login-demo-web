@@ -4,94 +4,35 @@ body {
     font-family: 宋体;
     -webkit-user-select: none;
     overflow-x: hidden;
-    -webkit-font-smoothing;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 header {
-    display: flex;
-    background: #C9BE62;
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #F0F8FF;
+    font-family: 黑体;
+    z-index: 100;
+    float: left;
 }
 
 a {
     text-decoration: none;
-    color: #463E3F;
-}
-
-#nav a:hover {
-    text-decoration: underline;
-    color: #E5E4E2;
 }
 
 #top {
     position: relative;
     left: 70%;
     width: 100%;
-    height: 35px;
-    line-height: 35px;
+    height: 50px;
+    line-height: 50px;
 }
 
 #top a {
     margin-left: 20px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    z-index: 10;
-    height: 40px;
-}
-
-.nav {
-    position: relative;
-    background: #98AFC7;
-    width: 350px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    z-index: 10;
-    overflow: hidden;
-    transition: all 0.7s;
-}
-
-.nav_text {
-    height: 40px;
-}
-
-.nav:hover {
-    background: rgba(22, 22, 22, 0.5);
-}
-
-#rmtj:hover {
-    background: rgba(22, 22, 22, 0.5);
-    height: 40px;
-}
-
-#sgyp:hover {
-    background: rgba(22, 22, 22, 0.5);
-    height: 160px;
-}
-
-#jmcq:hover {
-    background: rgba(22, 22, 22, 0.5);
-    height: 160px;
-}
-
-#drcp:hover {
-    background: rgba(22, 22, 22, 0.5);
-    height: 160px;
-}
-
-#mscp:hover {
-    background: rgba(22, 22, 22, 0.5);
-    height: 160px;
-}
-
-#jrwm:hover {
-    background: rgba(22, 22, 22, 0.5);
-    height: 160px;
+    color: #F0F8FF;
 }
 
 aside {
@@ -129,3 +70,7 @@ h1 {
     justify-content: center;
 }
 
+#move_top{
+    line-height: 40px;
+    display: none;
+}

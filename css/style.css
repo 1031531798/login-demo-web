@@ -18,6 +18,7 @@ body {
     text-align: center;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+
 }
 
 .sign-up-form h1 {
@@ -139,4 +140,9 @@ hr {
 #saveText {
     position: relative;
     top: -3px;
+}
+
+#loading {
+    z-index: 1000;
+    display: none;
 }
