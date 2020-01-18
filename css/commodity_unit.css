@@ -40,3 +40,9 @@
     text-align: end;
     color: tomato;
 }
+
+#commodity_rmtj{
+    position: relative;
+    margin-top: 50px;
+    line-height: 80px;
+}
