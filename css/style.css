@@ -143,6 +143,8 @@ hr {
 }
 
 #loading {
+    position: relative;
+    top: -100px;
     z-index: 1000;
     display: none;
 }

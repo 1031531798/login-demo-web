@@ -9,24 +9,27 @@ function side_click() {
 		$('#' + this.id).css("background", "rgb(255,127,80)")
 		$('#' + this.id).css("fontWeight", "bolder")
 	}
-	var top = function (){};
-	//获取滚动条位置为以后侧栏定位做准备
+	var top = function () {};
+	//获取滚动条位置
 	$(window).scroll(function () {
+		//保存滚动条位置
 		var dt = top.prototype.y;
-		console.log(dt)
+		//获取滚动条位置
 		top.prototype.y = $(window).scrollTop();
-		console.log(top.prototype.y)
-		if(dt > top.prototype.y){
+		//比较两次位置判断上滑还是下滑
+		if (dt > top.prototype.y) {
+			$('#header').stop();
 			$('#header').slideDown();
-		}else{
+		} else {
+			$('#header').stop();
 			$('#header').slideUp();
 		}
-		if(top.prototype.y > 100){
+		if (top.prototype.y > 100) {
 			//取消动画滞后
 			$('#move_top').stop();
 			//下滑显示
 			$('#move_top').slideDown();
-		}else{
+		} else {
 			//取消动画滞后
 			$('#move_top').stop();
 			//上滑隐藏

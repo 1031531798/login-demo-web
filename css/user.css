@@ -9,7 +9,7 @@ body {
 	height: 100%;
 }
 
-#user_content{
+#user_content {
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
@@ -38,7 +38,7 @@ aside {
 	height: 837px;
 	display: flex;
 	justify-content: center;
-	background-color:pink;
+	background-color: pink;
 }
 
 #ui_side_top {
@@ -80,12 +80,17 @@ aside {
 	transform: rotate(45deg);
 }
 
-@keyframes myfirst{
-	from {left: -260px;}
-    to {left: -20px;}
+@keyframes myfirst {
+	from {
+		left: -260px;
+	}
+
+	to {
+		left: -20px;
+	}
 }
 
-#picture_img:hover #line{
+#picture_img:hover #line {
 	animation: myfirst 1s;
 }
 
@@ -93,7 +98,6 @@ aside {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 10%;
-	display: none;
 }
 
 #ui_side_bottom {
@@ -120,9 +124,18 @@ aside {
 	cursor: pointer;
 }
 
-#user_style{
+#user_style {
 	height: 100%;
 	background: orange;
 	background-repeat: no-repeat;
 }
 
+#user_setting{
+	width: 50px;
+	height: 50px;
+	transition: all 0.7s;
+}
+
+#user_setting:hover{
+	transform: rotate(75deg);
+}
