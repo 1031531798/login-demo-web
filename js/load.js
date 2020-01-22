@@ -4,7 +4,7 @@ window.onload = function (){
     //判断页面是登录还是注册
     switch(title){
         case "Regist" : registChange();break;
-        case "Home" : carousel();side_click();saveUserName();break;
+        case "Home" : carousel();side_click();saveUserName();token();break;
         case "User Interface" : getUserName();break;
     }
 }
