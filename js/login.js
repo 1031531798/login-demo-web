@@ -70,7 +70,7 @@ function submit() {
     }
     if (emailFlag && passwordFlag) {
         //loading动画显示
-        $('#loading').show();
+        $('#cover').show();
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'api/login/userLogin', true);
         xhr.send(new FormData($("#login_form")[0]));
@@ -80,7 +80,7 @@ function submit() {
             var OK = 200; // status 200 is a successful return.
             if (xhr.readyState === DONE) {
                 //loading动画隐藏
-                $('#loading').hide();
+                $('#cover').hide();
                 if (xhr.status === OK) {
                     var result = JSON.parse(xhr.responseText);
                     if (result.code === "200") {
