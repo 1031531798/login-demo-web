@@ -30,7 +30,6 @@ function token() {
 
 
     function userDetails(token) {
-        console.log(1)
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'api/user/details', true);
         xhr.setRequestHeader("Authorization", token)
@@ -42,8 +41,14 @@ function token() {
             if (xhr.readyState === DONE) {
                 if (xhr.status === OK) {
                     var result = JSON.parse(xhr.responseText);
-                    console.log(result)
+                    if(result.code == "401"){
+                        $.cookie("token", "", {
+                            expires: -1
+                        });
+                        window.location.href = "../login.html";
+                    }
                     $('#user-name').html(result.result.name);
+                    console.log(xhr.status)
                 }
             }
         }
