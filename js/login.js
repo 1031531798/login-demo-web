@@ -90,10 +90,13 @@ function submit() {
                         //登录成功！跳转到主页
                         window.location.href = "../index.html";
                     } else {
-                        alert('Error: ' + result.message);
+                        $("#alert_text").text('Error: ' + result.message);
+                        $("#alert_text").slideDown(700)
                     }
                 } else {
-                    alert('Error: ' + xhr.msg); // An error occurred during the request.
+                    // An error occurred during the request.
+                    $("#alert_text").text('Error: ' + xhr.msg);
+                    $("#alert_text").slideDown(700)
                 }
             }
         }
