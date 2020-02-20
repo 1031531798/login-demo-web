@@ -1,0 +1,13 @@
+#footer {
+    height: 300px;
+    background: black;
+    color: white;
+    font-family: Montserrat , sans-serif;
+    font-size: 14px;
+
+}
+#contact{
+    position: relative;
+    top: 10%;
+    left: 10%;
+}

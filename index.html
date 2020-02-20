@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="shortcut icon" href="#">
+</head>
+
+<body>
+	<header id="header">
+		<div id="top">
+			<div id="welcome">欢迎来到本网站！<a href="user.html"><span id="user-name"></span></a><a href="login.html" id="outUser">登出</a>
+			</div>
+			<div id="sigin"><a href="login.html">登 录</a><a href="regist.html">点击注册</a></div>
+		</div>
+	</header>
+	<aside id="aside">
+		<div class="side" id="side1"><span class="side_text">热门推荐</span></div>
+		<div class="side" id="side2"><span class="side_text"><a href="#commodity_sgyp">手工艺品</a></span></div>
+		<div class="side" id="side3"><span class="side_text">精美瓷器</span></div>
+		<div class="side" id="side4"><span class="side_text">达人出品</span></div>
+		<div class="side" id="side5"><span class="side_text">名师出品</span></div>
+		<div class="side" id="side6"><span class="side_text">关于我们</span></div>
+		<div id="move_top">
+			<div id="arrows"></div><span class="side_text"><a href="javascript:scrollTo(0,0);"
+					class="aside_a">顶部</a></span>
+		</div>
+	</aside>
+	<div id="commodity_rmtj">
+		<h1>热门推荐</h1>
+	</div>
+	<div id="Carousel">
+		<div id="c_img">
+			<img src="img/lb1.png" alt="" id="Carousel_img" class="lb">
+			<img src="img/lb2.png" alt="" id="Carousel_img2" class="lb">
+			<img src="img/lb3.png" alt="" id="Carousel_img3" class="lb">
+			<img src="img/lb4.png" alt="" id="Carousel_img4" class="lb">
+			<img src="img/lb5.png" alt="" id="Carousel_img5" class="lb">
+			<img src="img/lb6.png" alt="" id="Carousel_img6" class="lb">
+			<img src="img/lb7.png" alt="" id="Carousel_img7" class="lb">
+		</div>
+		<div id="c_button">
+			<div id="r1" class="ra2" name="btn" onmouseover="swimg(id)">
+			</div>
+			<div id="r2" class="ra1" name="btn" onmouseover="swimg(id)">
+			</div>
+			<div id="r3" class="ra1" name="btn" onmouseover="swimg(id)">
+			</div>
+			<div id="r4" class="ra1" name="btn" onmouseover="swimg(id)">
+			</div>
+			<div id="r5" class="ra1" name="btn" onmouseover="swimg(id)">
+			</div>
+			<div id="r6" class="ra1" name="btn" onmouseover="swimg(id)">
+			</div>
+			<div id="r7" class="ra1" name="btn" onmouseover="swimg(id)">
+			</div>
+		</div>
+		<div id="lunbo_a">
+			<a href="" id="lb_a1"></a>
+		</div>
+	</div>
+	<div>
+		<h1 id="commodity_sgyp">手工艺品</h1>
+	</div>
+	<div id="commodity_1">
+		<div id="app"></div>
+	</div>
+	<footer>
+		<div id="footer">
+			<div id="contact">
+				<h2>
+					联系方式
+				</h2>
+				<div id="footer_phone">
+					手机 : 13735003264
+				</div>
+				<br>
+				<div id="footer_qq">
+					QQ : 1031531798
+				</div>
+				<br>
+				<div id="footer_email">
+					邮箱 : 1031531798@qq.com
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer id="js">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/jquery.serializejson.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/carousel.js"></script>
+		<script src="js/cookie.js"></script>
+		<script src="js/side_click.js"></script>
+		<script src="js/token.js"></script>
+		<script src="js/load.js"></script>
+		<script src="https://unpkg.com/http-vue-loader"></script>
+		<script src="js/commodity.js"></script>
+    <script src="/dist/build.js"></script>
+	</footer>
+</body>
+
+</html>

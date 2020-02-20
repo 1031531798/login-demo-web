@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <div id="alert">
+        <div id="alert_text"></div>
+    </div>
+    <div id="cover">
+        <center id="loading">
+            <iframe src="loading.html" frameborder="0" scrolling="no" style="width: 500px;height: 500px; z-index: 1000;"></iframe>
+        </center>
+    </div>
+    <div class="sign-up-form">
+        <h1>SIGN ⚓ UP</h1>
+        <form action="/api/login" method="POST" id="login_form">
+            <div>
+                <label for="username"><img src="img/icons8-user-96.png" class="login-ui"></label>
+                <input type="username" id="username" name="username" class="input-box" placeholder="邮箱账号"
+                    maxlength="64">
+                <div id="email-box"></div>
+            </div>
+            <div>
+                <label for="password"><img src="img/icons8-password-1-96.png" class="login-ui"></label>
+                <input type="password" id="password" name="password" class="input-box" placeholder="你 的 密 码"
+                    maxlength="64">
+                <div id="password-box"></div>
+            </div>
+            <button type="button" class="signup-btn" id="login">登&emsp;录</button>
+        </form>
+        <hr>
+        <div>
+            <img src="img/icons8-qq-96.png" class="icon" alt="">
+            <img src="img/iconfinder_cssi_wechat_214715.png" class="icon" alt="">
+            <img src="img/icons8-weibo-96.png" class="icon" alt="">
+            <img src="img/icons8-github-100.png" class="icon" alt="">
+        </div>
+        <p>没有账号吗?<a href="regist.html">点击注册</a></p>
+    </div>
+    
+    <footer>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery.serializejson.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script src="js/load.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/cookie.js"></script>
+        <script src="js/token.js"></script>
+    </footer>
+</body>
+
+</html>

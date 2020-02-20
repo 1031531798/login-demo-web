@@ -1,0 +1,62 @@
+#Carousel {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    z-index: 7;
+}
+
+#c_img {
+    position: relative;
+}
+
+.lb {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s;
+}
+
+#c_button {
+    position: relative;
+    left: 860px;
+    top: 550px;
+    z-index: 100;
+}
+
+.ra1 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    margin-right: 15px;
+    float: left;
+    position: relative;
+    top: -15px;
+}
+
+.ra2 {
+    background-color: #696969;
+    width: 10px;
+    height: 10px;
+    border: 3px solid rgb(180, 180, 180);
+    border-radius: 8px;
+    margin-right: 15px;
+    float: left;
+    position: relative;
+    top: -17px;
+}
+
+#Carousel_img {
+    opacity: 1;
+}
+
+#r1:hover #lunbotu {
+    opacity: 1;
+}
+
+#lb_a1 {
+    display: block;
+    width: 1240px;
+    height: 547px;
+    position: relative;
+    left: 350px;
+}

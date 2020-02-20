@@ -1,0 +1,141 @@
+body {
+	margin: 0;
+	padding: 0;
+	-ms-user-select: none;
+	font-family: 'Poppins', sans-serif;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#user_content {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	height: 100%;
+}
+
+header {
+	background-image: url("../img/user_header.jpg");
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+header div {
+	font-size: 40px;
+	margin-left: 4%;
+	font-family: YouYuan;
+	color: #F5DEB3;
+	font-weight: bolder;
+}
+
+aside {
+	width: 300px;
+	height: 837px;
+	display: flex;
+	justify-content: center;
+	background-color: pink;
+}
+
+#ui_side_top {
+	flex-direction: column;
+	margin-top: 10%;
+}
+
+#picture {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10%;
+}
+
+#picture_img {
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	overflow: hidden;
+}
+
+#user_head {
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+}
+
+#user_head:hover {
+	cursor: pointer;
+	box-shadow: 3px 3px 3px 3px #B6B6B4;
+}
+
+#line {
+	width: 600px;
+	height: 10px;
+	background: white;
+	filter: blur(2px);
+	position: relative;
+	left: -260px;
+	transform: rotate(45deg);
+}
+
+@keyframes myfirst {
+	from {
+		left: -260px;
+	}
+
+	to {
+		left: -20px;
+	}
+}
+
+#picture_img:hover #line {
+	animation: myfirst 1s;
+}
+
+.top_text {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10%;
+}
+
+#ui_side_bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 30%;
+}
+
+.bottom_text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-size: 20px;
+	color: #3090C7;
+	width: 300px;
+	height: 50px;
+}
+
+.bottom_text:hover {
+	background: #D1D0CE;
+	cursor: pointer;
+}
+
+#user_style {
+	height: 100%;
+	background: orange;
+	background-repeat: no-repeat;
+}
+
+#user_setting{
+	width: 50px;
+	height: 50px;
+	transition: all 0.7s;
+}
+
+#user_setting:hover{
+	transform: rotate(75deg);
+}

@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/wallhaven-4geqpl.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: 1920px 969px;
+    background-attachment: fixed;
+}
+
+.sign-up-form {
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+
+}
+
+.sign-up-form h1 {
+    color: #1C8ADB;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #999;
+    outline: none;
+}
+
+button {
+    color: #FFF;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: #1c8adb;
+}
+
+a {
+    color: rgb(13, 140, 172);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.or {
+    background: #fff;
+    width: 36px;
+    margin: -21px auto 10px;
+}
+
+.login-ui {
+    width: 20px;
+    position: relative;
+    top: 5px;
+    right: 8px;
+}
+
+#checkbox-span {
+    position: relative;
+    top: 2px;
+}
+
+#name-box {
+    position: relative;
+    width: 300px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+#email-box {
+    position: relative;
+    width: 300px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+#password-box {
+    position: relative;
+    width: 300px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+#two_password-box {
+    position: relative;
+    width: 300px;
+    left: 40px;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+.input-box:focus {
+    border-color: #1c8adb;
+}
+
+.icon {
+    width: 40px;
+    margin: 10px 10px 0px 10px;
+}
+
+#terms {
+    font-size: 12px;
+}
+
+#autoText {
+    position: relative;
+    top: -3px;
+}
+
+#saveText {
+    position: relative;
+    top: -3px;
+}
+
+#loading {
+    position: relative;
+    top: 100px;
+    z-index: 1000;
+}
+
+#cover{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+
+#alert{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 60px;
+}
+
+#alert_text{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    background-color: pink;
+    opacity: 0.7;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    color: red;
+    display: none;
+}
