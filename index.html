@@ -8,7 +8,6 @@
 	<title>Home</title>
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/carousel.css">
-	<link rel="stylesheet" href="css/commodity_unit.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="shortcut icon" href="#">
 </head>
@@ -70,76 +69,7 @@
 		<h1 id="commodity_sgyp">手工艺品</h1>
 	</div>
 	<div id="commodity_1">
-		<div class="commodity_unit">
-			<div>
-				<img src="img/cy1.jpg" alt="" class="commodity_img">
-			</div>
-			<div class="commodity_text">
-				鼠年限定精致陶偶
-			</div>
-			<div class="commodity_text2">
-				由手工制成，适合家居装饰，为生活增添色彩。
-			</div>
-			<div class="commodity_price">
-				￥35
-			</div>
-		</div>
-		<div class="commodity_unit">
-			<div>
-				<img src="img/cy1.jpg" alt="" class="commodity_img">
-			</div>
-			<div class="commodity_text">
-				鼠年限定精致陶偶
-			</div>
-			<div class="commodity_text2">
-				由手工制成，适合家居装饰，为生活增添色彩。
-			</div>
-			<div class="commodity_price">
-				￥35
-			</div>
-		</div>
-		<div class="commodity_unit">
-			<div>
-				<img src="img/cy1.jpg" alt="" class="commodity_img">
-			</div>
-			<div class="commodity_text">
-				鼠年限定精致陶偶
-			</div>
-			<div class="commodity_text2">
-				由手工制成，适合家居装饰，为生活增添色彩。
-			</div>
-			<div class="commodity_price">
-				￥35
-			</div>
-		</div>
-		<div class="commodity_unit">
-			<div>
-				<img src="img/cy1.jpg" alt="" class="commodity_img">
-			</div>
-			<div class="commodity_text">
-				鼠年限定精致陶偶
-			</div>
-			<div class="commodity_text2">
-				由手工制成，适合家居装饰，为生活增添色彩。
-			</div>
-			<div class="commodity_price">
-				￥35
-			</div>
-		</div>
-		<div class="commodity_unit">
-			<div>
-				<img src="img/cy1.jpg" alt="" class="commodity_img">
-			</div>
-			<div class="commodity_text">
-				鼠年限定精致陶偶
-			</div>
-			<div class="commodity_text2">
-				由手工制成，适合家居装饰，为生活增添色彩。
-			</div>
-			<div class="commodity_price">
-				￥35
-			</div>
-		</div>
+		<div id="app"></div>
 	</div>
 	<footer>
 		<div id="footer">
@@ -147,15 +77,15 @@
 				<h2>
 					联系方式
 				</h2>
-				<div>
+				<div id="footer_phone">
 					手机 : 13735003264
 				</div>
 				<br>
-				<div>
+				<div id="footer_qq">
 					QQ : 1031531798
 				</div>
 				<br>
-				<div>
+				<div id="footer_email">
 					邮箱 : 1031531798@qq.com
 				</div>
 			</div>
@@ -164,12 +94,16 @@
 	<footer id="js">
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/jquery.serializejson.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
 		<script src="js/jquery.cookie.js"></script>
 		<script src="js/carousel.js"></script>
 		<script src="js/cookie.js"></script>
 		<script src="js/side_click.js"></script>
 		<script src="js/token.js"></script>
 		<script src="js/load.js"></script>
+		<script src="https://unpkg.com/http-vue-loader"></script>
+		<script src="js/commodity.js"></script>
+    	<script src="/dist/build.js"></script>
 	</footer>
 </body>
 
