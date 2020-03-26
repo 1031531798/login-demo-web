@@ -77,7 +77,7 @@ function submit() {
         // Track the state changes of the request.
         xhr.onreadystatechange = function () {
             var DONE = 4; // readyState 4 means the request is done.
-            var OK = 200; // status 200 is a successful return.
+            var OK = 200; // status 200 is a successful return. 
             if (xhr.readyState === DONE) {
                 //loading动画隐藏
                 $('#cover').hide();

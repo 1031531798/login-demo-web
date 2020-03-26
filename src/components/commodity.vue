@@ -19,7 +19,7 @@
 
 <script>
   export default {
-          name:'Vcontent',// footer：Vfooter,content:content
+          name:'commodity',// footer：Vfooter,content:content
           props:{
             msg:{
               type: Function
@@ -48,6 +48,11 @@
     text-decoration: underline;
   }
 
+  .commodity_footer{
+    position: relative;
+    height: 100px;
+  }
+
   .commodity_img {
       width: 200px;
       height: 230px;
@@ -55,6 +60,8 @@
 
   .commodity_text {
       font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
   }
 
   .commodity_text2 {
@@ -62,7 +69,9 @@
   }
 
   .commodity_price {
-      text-align: end;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       color: tomato;
   }
 

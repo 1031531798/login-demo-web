@@ -1,17 +1,17 @@
 <template>
     <div class="app">
         <div class="commodity">
-          <Vcontent :msg="msg"></Vcontent>
-          <Vcontent :msg="msg2"></Vcontent>
-          <Vcontent :msg="msg3"></Vcontent>
-          <Vcontent :msg="msg4"></Vcontent>
-          <Vcontent :msg="msg5"></Vcontent>
+          <commodity :msg="msg"></commodity>
+          <commodity :msg="msg2"></commodity>
+          <commodity :msg="msg3"></commodity>
+          <commodity :msg="msg4"></commodity>
+          <commodity :msg="msg5"></commodity>
         </div>
     </div>
 </template>
 <script>
 // 1. 先引入子组件
-import Vcontent from './components/Vcontent.vue'
+import commodity from './components/commodity.vue'
     export default {
         name:'App',
         data(){
@@ -28,7 +28,7 @@ import Vcontent from './components/Vcontent.vue'
                     return{
                       imgSrc:"../img/dswo.jpg",
                       text:"性感等身玩偶",
-                      text2:"你想在寂寞的夜里有个温暖的怀抱吗？你想有个充实的床伴吗？",
+                      text2:"99.9%鹅毛填充，柔软加温暖，无线裁缝技术让你摸不到的丝滑。",
                       price:"260"
                     }
                 },
@@ -53,7 +53,7 @@ import Vcontent from './components/Vcontent.vue'
                       imgSrc:"../img/cc.jpg",
                       text:"反叛的鲁路修-C.C手办",
                       text2:"反叛的鲁路修动漫中女主角，有着惊人的美貌与气质！",
-                      price:"99999"
+                      price:"999"
                     }
                 }
             }
@@ -66,7 +66,7 @@ import Vcontent from './components/Vcontent.vue'
         },
         // 2. 挂载组件
         components:{
-            Vcontent,
+            commodity,
         }
     }
 </script>
