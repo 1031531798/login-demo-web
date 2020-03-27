@@ -51,7 +51,7 @@ import commodity from './components/commodity.vue'
                 msg5(){
                     return{
                       imgSrc:"../img/mg5.jpg",
-                      text:"十二生肖鸡,
+                      text:"十二生肖鸡",
                       text2:"金鸡报晓，象征勤奋，给孩子来一个！",
                       price:"399"
                     }
