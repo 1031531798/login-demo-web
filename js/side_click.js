@@ -102,29 +102,3 @@ function setNavAnimation(){
 		$('html,body').animate({ scrollTop: 0}, "normal");
     });
 }
-class side_local{
-	constructor(){
-
-	}
-	locations(){
-		let side1 = 20;
-		let side2 = 742;
-		let side3 = 1183;
-		let side4 = 1624;
-		let side5 = 1900;
-		let y = $(window).scrollTop();
-	}
-	estimate(){
-		if(this.y > side1 && this.y < side2){
-			style_change("#side1");
-		}else if(this.y > side2 && this.y < side3 ){
-			style_change("#side2");
-		}else if(this.y > side3 && this.y < side4){
-			style_change("#side3");
-		}else if(this.y > side4 && this.y < side5){
-			style_change("#side4");
-		}else if(this.y > side5 && this.y < 2000){
-			style_change("#side5");
-		}
-	}
-}
