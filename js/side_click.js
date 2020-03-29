@@ -41,7 +41,7 @@ function side_click() {
 		function side_foucs(){
 			//获取各个内容的位置
 			let side1 = 20;
-			let side2 = 742;
+			let side2 = 680;
 			let side3 = 1183;
 			let side4 = 1624;
 			let side5 = 1900;

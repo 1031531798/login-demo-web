@@ -14,6 +14,7 @@
           	￥{{msg(). price}}
           </div>
         </div>
+        <a id="commodity_url"></a>
   		</div>
 </template>
 
@@ -38,6 +39,7 @@
       transition: all 0.5s;
       border: 1px solid;
       border-color: #fff;
+      position: relative;
   }
 
   .commodity_unit:hover {
@@ -79,5 +81,14 @@
       position: relative;
       margin-top: 50px;
       line-height: 80px;
+  }
+
+  #commodity_url{
+    width: 200px;
+    height: 330px;
+    display: block;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
   }
 </style>
