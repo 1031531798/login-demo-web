@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Home</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/carousel.css">
 	<link rel="stylesheet" href="css/footer.css">
@@ -15,8 +16,9 @@
 <body>
 	<header id="header">
 		<div id="top">
-			<div id="welcome">欢迎来到本网站！<a href="user.html"><span id="user-name"></span></a><a href="login.html" id="outUser">登出</a>
-			</div>
+			<!-- <div id="welcome">欢迎来到本网站！<a href="user.html"><span id="user-name"></span></a><a href="login.html" id="outUser">登出</a> -->
+			<!-- </div> -->
+			<div class="actionBar" title="新消息"><span class="glyphicon glyphicon-exclamation-sign"></span><div class="actionNum">1</div></div>
 			<div id="sigin"><a href="login.html">登 录</a><a href="regist.html">点击注册</a></div>
 		</div>
 	</header>
@@ -119,6 +121,7 @@
 	<footer id="js">
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/jquery.serializejson.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
 		<script src="js/jquery.cookie.js"></script>
 		<script src="js/carousel.js"></script>
