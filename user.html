@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>User Interface</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-table.min.css">
+	<link rel="stylesheet" href="layui/layui/css/layui.css">
 	<link rel="stylesheet" href="css/user.css">
 	<link rel="shortcut icon" href="#">
 </head>
@@ -16,8 +19,8 @@
 	</header>
 	<div id="user_content">
 		<aside>
-			<div>
-				<div id="ui_side_top">
+			<div class="user_side">
+				<div id="ui_side_top" class="">
 					<div id="picture">
 						<div id="picture_img">
 							<img src="img/unlog.jpg" id="user_head">
@@ -26,7 +29,7 @@
 					</div>
 					<div id="ui_name" class="top_text">
 				</div>
-				<div id="ui_side_bottom">
+				<div id="ui_side_bottom" data-toggle="tab">
 					<div id="ui_grxx" class="bottom_text">
 						个人信息
 					</div>
@@ -48,14 +51,18 @@
 				</div>
 			</div >
 		</aside>
-		<div id="user_style">
-			
+		<div id="user_manage">
+			<iframe src="" frameborder="0" ></iframe>
 		</div>
 	</div>
 	<footer>
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/jquery.serializejson.js"></script>
 		<script src="js/jquery.cookie.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-table.min.js"></script>
+		<script src="js/bootstrap-table-zh-CN.min.js"></script>
+		<script src="layui/layui/layui.all.js"></script>
 		<script src="js/load.js"></script>
 		<script src="js/user.js"></script>
 	</footer>

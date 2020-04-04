@@ -3,24 +3,26 @@ body {
 	padding: 0;
 	-ms-user-select: none;
 	font-family: 'Poppins', sans-serif;
+	overflow-y: hidden;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	width: auto;
 }
 
 #user_content {
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
-	height: 100%;
+	justify-content:flex-start;
+	height: 90%;
 }
 
 header {
 	background-image: url("../img/user_header.jpg");
 	background-size: 100% 100%;
 	width: 100%;
-	height: 100px;
+	height: 10%;
 	display: flex;
 	align-items: center;
 }
@@ -34,14 +36,23 @@ header div {
 }
 
 aside {
-	width: 300px;
-	height: 837px;
+	width: 15%;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	background-color: pink;
+	position: relative;
+}
+
+.user-side{
+	position: absolute;
+	display: flex;
+	width: 100%;
 }
 
 #ui_side_top {
+	display: flex;
+	width: 100%;
 	flex-direction: column;
 	margin-top: 10%;
 }
@@ -50,19 +61,20 @@ aside {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 10%;
+	width: 100%;
 }
 
 #picture_img {
-	width: 150px;
-	height: 150px;
+	display: flex;
+	width: auto;
 	border-radius: 75px;
 	overflow: hidden;
 }
 
-#user_head {
-	width: 150px;
-	height: 150px;
-	border-radius: 75px;
+#user-head{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
 }
 
 #user_head:hover {
@@ -71,7 +83,7 @@ aside {
 }
 
 #line {
-	width: 600px;
+	width: 100%;
 	height: 10px;
 	background: white;
 	filter: blur(2px);
@@ -115,8 +127,10 @@ aside {
 	margin-bottom: 5%;
 	font-size: 20px;
 	color: #3090C7;
-	width: 300px;
 	height: 50px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select:none;
 }
 
 .bottom_text:hover {
@@ -124,10 +138,16 @@ aside {
 	cursor: pointer;
 }
 
-#user_style {
+#user_manage {
+	width: 100%;
 	height: 100%;
 	background: orange;
 	background-repeat: no-repeat;
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
 }
 
 #user_setting{

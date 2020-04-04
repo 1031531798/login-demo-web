@@ -5,6 +5,6 @@ window.onload = function (){
     switch(title){
         case "Regist" : registChange();break;
         case "Home" : carousel();side_click();saveUserName();token();setNavAnimation();break;
-        case "User Interface" : getUserName();break;
+        case "User Interface" : getUserName();userInfo();head_img();break;
     }
 }
