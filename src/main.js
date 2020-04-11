@@ -3,6 +3,7 @@ import sgyp from './sgyp.vue'
 import jmcq from './jmcq.vue'
 import mgyp from './mgyp.vue'
 import dszp from './dszp.vue'
+import userHead from './user-head.vue'
 
 var SGYP = new Vue({
   el: '#sgyp',
@@ -22,4 +23,9 @@ var MGYP = new Vue({
 var DSZP = new Vue({
   el: '#dszp',
   render: h => h(dszp)
+})
+
+var HEAD = new Vue({
+  el: '#userHead',
+  render: h => h(userHead)
 })

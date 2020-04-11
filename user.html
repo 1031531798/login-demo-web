@@ -16,43 +16,56 @@
 		<div>
 			用户界面
 		</div>
+		<div id="userHead">
+
+		</div>
 	</header>
 	<div id="user_content">
 		<aside>
-			<div class="user_side">
-				<div id="ui_side_top" class="">
-					<div id="picture">
-						<div id="picture_img">
-							<img src="img/unlog.jpg" id="user_head">
-							<div id="line"></div>
-						</div>
-					</div>
-					<div id="ui_name" class="top_text">
-				</div>
-				<div id="ui_side_bottom" data-toggle="tab">
-					<div id="ui_grxx" class="bottom_text">
-						个人信息
-					</div>
-					<div id="ui_wddd" class="bottom_text">
-						我的订单
-					</div>
-					<div id="ui_shdz" class="bottom_text">
-						收货地址
-					</div>
-					<div id="ui_mbsz" class="bottom_text">
-						密保设置
-					</div>
-					<div id="ui_ysxg" class="bottom_text">
-						隐私相关
-					</div>
-				</div>
-				<div>
-					
-				</div>
-			</div >
+			<div class="nav nav-list" >
+				<ul class="nav nav-pills" id="menu">
+					<li class="active">
+						<a href="#content" id="sy" data-addtab="menu" data-toggle="tab" data-url="user/main">
+							<span class="glyphicon glyphicon-home btx"></span>首页
+						</a>
+					</li>
+					<li>
+						<a href="#content1" id="yhgl" data-addtab="menu1" data-toggle="tab" data-url="user/main">
+							<span class="glyphicon glyphicon-user btx"></span>用户管理
+						</a>
+					</li>
+					<li>
+						<a href="#content2"  id="wddd" data-addtab="menu2" data-toggle="tab" data-url="user/main">
+							<span class="glyphicon glyphicon-shopping-cart btx"></span>我的订单
+						</a>
+					</li>
+					<li>
+						<a href="#content3" id="mmxg" data-addtab="menu3" data-toggle="tab" data-url="user/main">
+							<span class="glyphicon glyphicon-jpy btx"></span>支付相关
+						</a>
+					</li>
+					<li>
+						<a href="#content4" id="xtsz" data-addtab="menu4" data-toggle="tab" data-url="user/main">
+							<span class="glyphicon glyphicon-cog btx"></span>系统设置
+						</a>
+					</li>
+				</ul>
+			</div>
 		</aside>
-		<div id="user_manage">
-			<iframe src="" frameborder="0" ></iframe>
+		<div class="col-md-9 user_pan">
+			<ul class="nav nav-tabs" id="menu-two">
+				<li class="active aaa">
+					<a href="#content" data-addtab="menu" data-toggle="tab">首页</a>
+					<span></span>
+				</li>
+			</ul>
+			<div class="tab-content tabPane">
+				<div class="tab-pane active" id="content">欢迎来到个人空间！</div>
+				<div class="tab-pane" id="content1">1:用户管理</div>
+				<div class="tab-pane" id="content2">2：我的订单</div>
+				<div class="tab-pane" id="content3">3：密码相关</div>
+				<div class="tab-pane" id="content4">4：系统设置</div>
+			</div>
 		</div>
 	</div>
 	<footer>
@@ -61,10 +74,13 @@
 		<script src="js/jquery.cookie.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/bootstrap-table.min.js"></script>
+		<script src="js/bootstrap.addtabs.js"></script>
+		<script src="js/bootstrap-mytabs.js"></script>
 		<script src="js/bootstrap-table-zh-CN.min.js"></script>
 		<script src="layui/layui/layui.all.js"></script>
 		<script src="js/load.js"></script>
 		<script src="js/user.js"></script>
+		<script src="js/nod.js"></script>
 	</footer>
 </body>
  </html>
