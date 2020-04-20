@@ -25,7 +25,7 @@ var DSZP = new Vue({
   render: h => h(dszp)
 })
 
-var HEAD = new Vue({
-  el: '#userHead',
-  render: h => h(userHead)
-})
+// var HEAD = new Vue({
+//   el: '#userHead',
+//   render: h => h(userHead)
+// })

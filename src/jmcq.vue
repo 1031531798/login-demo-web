@@ -71,21 +71,5 @@ import commodity from './components/commodity.vue'
     }
 </script>
 <style>
-  .app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .commodity {
-      width: 1100px;
-      height: 350px;
-      display: flex;
-      flex-wrap: nowrap;
-      background: rgb(231, 229, 229);
-      padding: 5px 43px 5px 43px;
-  }
-  #pp{
-    position: relative;
-    left: 20%;
-  }
+ 
 </style>

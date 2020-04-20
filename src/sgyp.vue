@@ -73,11 +73,13 @@ import commodity from './components/commodity.vue'
 <style>
   .app{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
   }
   .commodity {
-      width: 1100px;
+      position: relative;
+      width: 1200px;
       height: 350px;
       display: flex;
       flex-wrap: nowrap;
