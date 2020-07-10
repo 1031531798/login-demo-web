@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
-    "jquery": "^3.5.0",
-    "vue": "^2.5.11"
+    "layui-src": "^2.5.5"
   },
   "browserslist": [
     "> 1%",
@@ -22,14 +21,30 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-component": "^1.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
+    "cross-env": "^5.2.1",
     "css-loader": "^0.28.7",
+    "element-ui": "^2.13.2",
     "file-loader": "^1.1.4",
+    "jquery": "^3.5.1",
+    "layui-src": "^2.5.5",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "vue": "^2.6.11",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
-  }
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.5"
+  },
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhogeK/login-demo-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AhogeK/login-demo-web/issues"
+  },
+  "homepage": "https://github.com/AhogeK/login-demo-web#readme"
 }

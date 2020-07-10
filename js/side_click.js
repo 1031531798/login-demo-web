@@ -1,7 +1,9 @@
 function side_click() {
+  alert($(window).width())
   //获取滚动条位置
   $(window).scroll(function () {
-    header_show();
+    var top = new Function;
+    header_show(top);
     side_foucs();
   })
   //避免刷新页面后无法直接显示回到顶部按钮
@@ -16,22 +18,20 @@ function side_click() {
   });
 }
 //header和回到顶部下滑
-function header_show() {
-  var top = function () {};
-  //保存滚动条位置
-  var dt = top.prototype.y; //设置第一次高度的值
-  //获取滚动条位置
-  top.prototype.y = $(window).scrollTop(); //设置第二次高度的值
+function header_show(top) {
+  var wt = top.prototype.y
+  console.log(top.prototype.y)
+  top.prototype.y = $(window).scrollTop();
   //比较两次位置判断上滑还是下滑
-  if (dt > top.prototype.y) {
-    $('#header').stop();
-    $('#header').slideDown();
-  } else {
-    $('#header').stop();
-    $('#header').slideUp();
-  }
+  // if (oldY < top.prototype.Y) {
+  //   $('#header').stop();
+  //   $('#header').slideDown();
+  // } else {
+  //   $('#header').stop();
+  //   $('#header').slideUp();
+  // }
   //设置回到顶部
-  if (top.prototype.y > 100) {
+  if (this.windowTop > 100) {
     //取消动画滞后
     $('#move_top').stop();
     //下滑显示
