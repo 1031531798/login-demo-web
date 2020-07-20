@@ -1,21 +1,19 @@
 <template>
   <div class="title">
-    <div class="title-div"></div>
-    <div class="title-div"></div>
-    <h2 class="title-text">热门推荐</h2>
-    <div class="title-more">
-      <el-link type="primary"><i class="el-icon-position"></i>查看更多</el-link>
+    <div class="title-div">
+      <span class="title-text">{{title_text.text}}</span>
+      <span class="title-textDetails">{{title_text.details}}</span>
     </div>
   </div>
 </template>
 <script>
 // 1. 先引入子组件
 export default {
-  name: "titleText",
+  name: "titleOne",
   data() {
     return {};
   },
-  props: {},
+  props: ['title_text'],
   methods: {},
   computed: {}
 };
@@ -25,25 +23,29 @@ export default {
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
-  left: 20px;
   width: 100%;
+  margin: 3%;
+  left: 20px;
+  font-family: ProximaNova,Helvetica,Arial,sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
 }
 .title-div {
-  width: 5px;
-  height: 35px;
-  border: 0px solid;
-  border-radius: 2.5px;
-  background: red;
-  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }
 .title-text {
   position: relative;
-  margin: 0px 100px 0px 20px;
+  margin: 0px 100px 0px 15px;
 }
 .title-more{
   position: relative;
   float: right;
+}
+.title-textDetails{
+  font-size: 1.5rem;
 }
 </style>

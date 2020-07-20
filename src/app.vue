@@ -1,18 +1,17 @@
 <template>
   <div class="app">
-    <userTop></userTop>
     <carousel :carouselImgSrc="carouselImgSrc"></carousel>
-    <titleText></titleText>
-    <div class="commodity">
-      <item :item_data="rmtjMsg"></item>
-    </div>
+    <titleText :title_text="title_textArr[0]" id="titleOne"></titleText>
+    <itemOne :itemOne_data="itemOne_data"></itemOne>
+    <titleText :title_text="title_textArr[1]" id="titleOne"></titleText>
+    <itemTwo :itemTwo_data="itemTwo_data"></itemTwo>
     <bottom class="bottom"></bottom>
   </div>
 </template>
 <script>
 // 1. 先引入子组件
-import item from './components/index_item';
-import userTop from './components/user-head';
+import itemOne from './components/itemOne';
+import itemTwo from './components/itemTwo';
 import carousel from './components/carousel';
 import titleText from "./components/title";
 import bottom from "./components/bottom";
@@ -20,30 +19,68 @@ export default {
   name: "App",
   data() {
     return {
-      rmtjMsg: [
+      title_textArr:[
+        {text:'最新上线',details:'优选每日精品工艺作品'},
+        {text:'生活艺术',details:'让艺术充满生活 创造生活情调'}
+      ],
+      itemOne_data: [
         {
-          item_src: "../img/rmtj1.jpg",
-          item_name: "鼠年限定精致陶偶",
+          item_src: "../img/it1.jpg",
+          item_name: "手工磨砂酒瓶",
           item_text: "由手工制成，适合家居装饰，为生活增添色彩。",
-          item_price: "35"
+          item_price: "35",
+          item_designer: "王明",
+          item_type: ["手工"]
         },
         {
-          item_src: "../img/rmtj2.jpg",
-          item_name: "性感等身玩偶",
-          item_text: "99.9%鹅毛填充，柔软加温暖，无线裁缝技术让你摸不到的丝滑。",
-          item_price: "260"
+          item_src: "../img/it2.jpg",
+          item_name: "玻璃树",
+          item_text: "通透的玻璃树，纯洁的代表作",
+          item_price: "260",
+          item_designer: "王明",
+          item_type: ["玻璃"]
         },
         {
-          item_src: "../img/rmtj3.jpg",
-          item_name: "儿童隧道火车玩具",
-          item_text: "让你的孩子动手开发大脑，在游戏中健康成长！",
-          item_price: "560"
+          item_src: "../img/it3.jpg",
+          item_name: "家具装饰品",
+          item_text: "手工家具装饰品",
+          item_price: "29",
+          item_designer: "王明",
+          item_type: ["手工"]
         },
         {
-          item_src: "../img/yg.jpg",
-          item_name: "浮士德鱼缸",
-          item_text: "想养鱼吗？你不用998，不用698，现在只要298！",
-          item_price: "298"
+          item_src: "../img/it4.jpg",
+          item_name: "木制挂件",
+          item_text: "可爱的挂件，原木制成，打磨光滑",
+          item_price: "298",
+          item_designer: "王明",
+          item_type: ["木雕","挂饰"]
+        }
+      ],
+      itemTwo_data:[
+        {
+          item_src: "../img/it5.jpg",
+          item_name: "艺术蜡烛",
+          item_text: "可爱的挂件，原木制成，打磨光滑",
+          item_price: "298",
+          item_designer: "王明",
+          item_type: ["木雕","挂饰"]
+        },
+        {
+          item_src: "../img/it6.jpg",
+          item_name: "木制挂件",
+          item_text: "可爱的挂件，原木制成，打磨光滑",
+          item_price: "298",
+          item_designer: "王明",
+          item_type: ["木雕","挂饰"]
+        },
+        {
+          item_src: "../img/it7.jpg",
+          item_name: "艺术花瓶",
+          item_text: "别出心裁的制作方法 让家拥有自然的美丽",
+          item_price: "298",
+          item_designer: "王明",
+          item_type: ["木雕","挂饰"]
         }
       ],
       carouselImgSrc:[
@@ -60,8 +97,8 @@ export default {
   computed: {},
   // 2. 挂载组件
   components: {
-    item,
-    userTop,
+    itemOne,
+    itemTwo,
     carousel,
     titleText,
     bottom
