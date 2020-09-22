@@ -157,5 +157,11 @@ export default {
     width: 80px;
     padding-left: 15px;
   }
+  .itemOne-left + .itemOne-right{
+    width: 100%!important;
+  }
+  .itemOne-price{
+    left:75%!important;
+  }
 }
 </style>

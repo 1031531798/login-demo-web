@@ -1,27 +1,11 @@
 <template>
   <div class="itemTwo">
-    <div class="itemTwo-left">
-      <div class="itemTwo-title">{{itemTwo_data[0].item_name}}</div>
-      <div class="itemTwo-titleTwo">{{itemTwo_data[0].item_text}}</div>
-      <el-image :src="itemTwo_data[0].item_src" fit="cover"></el-image>
+    <div class="itemTwo-main">
+      <el-image class="itemTwo-main-img" :src="itemTwo_data[0].item_src" :alt="itemTwo_data[0].item_name" fit="cover"></el-image>
     </div>
-    <div class="itemTwo-right">
-      <div class="itemTwo-right-one">
-        <div class="itemTwo-right-div">
-          <div class="itemTwo-title">{{itemTwo_data[1].item_name}}</div>
-          <div class="itemTwo-titleTwo">{{itemTwo_data[1].item_text}}</div>
-          <!-- <div>{{itemTwo_data[1].item_price}}</div> -->
-        </div>
-        <el-image :src="itemTwo_data[1].item_src"></el-image>
-      </div>
-      <el-divider></el-divider>
-      <div class="itemTwo-right-two">
-        <div class="itemTwo-right-div">
-          <div class="itemTwo-title">{{itemTwo_data[2].item_name}}</div>
-          <div class="itemTwo-titleTwo">{{itemTwo_data[2].item_text}}</div>
-          <!-- <div>{{itemTwo_data[1].item_price}}</div> -->
-        </div>
-        <el-image :src="itemTwo_data[2].item_src"></el-image>
+    <div id="itemTwo-right">
+      <div class="itemTwo-right-unit" v-for="(unit,key) in itemTwo_data" :key="key">
+        <el-image :src="itemTwo_data.item_src" :alt="itemTwo_data.item_name" fit="cover"></el-image>
       </div>
     </div>
   </div>
@@ -31,18 +15,29 @@
 export default {
   name: "itemTwo",
   data() {
-    return {};
+    return {
+      arr:['qiaozhi','zuofei','liming','xiena'],
+      age:['16','11','12','22']
+    };
   },
   props: ['itemTwo_data'],
-  methods: {},
-  computed: {}
+  created(){
+  },
+  methods: {
+  },
+  computed: {
+    num:function(){
+      this.index = this.index + this.xun;
+      return this.index;
+    }
+  }
 };
 </script>
 <style>
 .itemTwo{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
@@ -50,58 +45,18 @@ export default {
   padding-bottom: 10%;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
-.itemTwo-title{
+.itemTwo-main{
   display: flex;
-  width: 100%;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-.itemTwo-titleTwo{
-  display: flex;
-  width: 100%;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-.itemTwo-left{
-  display: flex;
-  width: 50%;
-  height: 100%;
-  background: #f1efef;
-  margin-right: 10px;
-  flex-direction: column;
+  width: 40rem;
+  height: 50rem;
+  border: 0px;
+  border-radius: 3rem;
+  overflow: hidden;
 }
 .itemTwo-right{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 45%;
 }
-.itemTwo-right-one{
+.itemTwo-right-unit{
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 45%;
-}
-.itemTwo-right-two{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 45%;
-}
-.itemTwo-right-div{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.itemTwo-right-div div:first-child{
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-.itemTwo-right-text{
-  display: flex;
-  width: 100%;
 }
 </style>

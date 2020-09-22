@@ -2,9 +2,11 @@
   <div class="app">
     <carousel :carouselImgSrc="carouselImgSrc"></carousel>
     <titleText :title_text="title_textArr[0]" id="titleOne"></titleText>
-    <itemOne :itemOne_data="itemOne_data"></itemOne>
-    <titleText :title_text="title_textArr[1]" id="titleOne"></titleText>
-    <itemTwo :itemTwo_data="itemTwo_data"></itemTwo>
+    <itemOne :itemOne_data="itemOne_data" id="itemOne"></itemOne>
+    <titleText :title_text="title_textArr[1]" id="titleTwo"></titleText>
+    <itemTwo :itemTwo_data="itemTwo_data" id="itemTwo"></itemTwo>
+    <titleText :title_text="title_textArr[2]" id="titleThr"></titleText>
+    <itemThr :itemThr_data="itemThr_data" id="itemThr"></itemThr>
     <bottom class="bottom"></bottom>
   </div>
 </template>
@@ -12,6 +14,7 @@
 // 1. 先引入子组件
 import itemOne from './components/itemOne';
 import itemTwo from './components/itemTwo';
+import itemThr from './components/itemThr';
 import carousel from './components/carousel';
 import titleText from "./components/title";
 import bottom from "./components/bottom";
@@ -19,9 +22,12 @@ export default {
   name: "App",
   data() {
     return {
+      src:'../../img/ss1.jpg',
       title_textArr:[
-        {text:'最新上线',details:'优选每日精品工艺作品'},
-        {text:'生活艺术',details:'让艺术充满生活 创造生活情调'}
+        {text:'每日优选',details:'优选每日精品工艺作品'},
+        {text:'热门活动',details:'每期优惠 百万福利'},
+        {text:'名家名作',details:'专家品质认证'},
+        {text:'即将上线',details:'各商家正在紧密研发中...'},
       ],
       itemOne_data: [
         {
@@ -30,7 +36,7 @@ export default {
           item_text: "由手工制成，适合家居装饰，为生活增添色彩。",
           item_price: "35",
           item_designer: "王明",
-          item_type: ["手工"]
+          item_type: ["手工","瓷器"],
         },
         {
           item_src: "../img/it2.jpg",
@@ -38,7 +44,7 @@ export default {
           item_text: "通透的玻璃树，纯洁的代表作",
           item_price: "260",
           item_designer: "王明",
-          item_type: ["玻璃"]
+          item_type: ["瓷器"]
         },
         {
           item_src: "../img/it3.jpg",
@@ -46,7 +52,7 @@ export default {
           item_text: "手工家具装饰品",
           item_price: "29",
           item_designer: "王明",
-          item_type: ["手工"]
+          item_type: ["手工","摆件"]
         },
         {
           item_src: "../img/it4.jpg",
@@ -59,29 +65,63 @@ export default {
       ],
       itemTwo_data:[
         {
-          item_src: "../img/it5.jpg",
-          item_name: "艺术蜡烛",
-          item_text: "可爱的挂件，原木制成，打磨光滑",
+          item_src: "../img/hd3.jpg",
+          item_name: "荷花刺绣图",
+          item_text: "清纯可爱 活泼动人",
           item_price: "298",
           item_designer: "王明",
           item_type: ["木雕","挂饰"]
         },
         {
-          item_src: "../img/it6.jpg",
-          item_name: "木制挂件",
-          item_text: "可爱的挂件，原木制成，打磨光滑",
+          item_src: "../img/hd1.jpg",
+          item_name: "贵族纹路",
+          item_text: "稳重中透露贵气",
           item_price: "298",
           item_designer: "王明",
           item_type: ["木雕","挂饰"]
         },
         {
-          item_src: "../img/it7.jpg",
-          item_name: "艺术花瓶",
-          item_text: "别出心裁的制作方法 让家拥有自然的美丽",
+          item_src: "../img/hd2.jpg",
+          item_name: "花",
+          item_text: "采用多次绘制 色彩鲜丽动人",
+          item_price: "298",
+          item_designer: "王明",
+          item_type: ["木雕","挂饰"]
+        },
+        {
+          item_src: "../img/hd4.jpg",
+          item_name: "花",
+          item_text: "采用多次绘制 色彩鲜丽动人",
           item_price: "298",
           item_designer: "王明",
           item_type: ["木雕","挂饰"]
         }
+      ],
+      itemThr_data: [
+        {
+          item_src: "../img/dk1.jpg",
+          item_name: "手工磨砂酒瓶",
+          item_text: "由手工制成，适合家居装饰，为生活增添色彩。",
+          item_price: "35",
+          item_designer: "王明",
+          item_type: ["手工"]
+        },
+        {
+          item_src: "../img/dk2.jpg",
+          item_name: "玻璃树",
+          item_text: "通透的玻璃树，纯洁的代表作",
+          item_price: "260",
+          item_designer: "王明",
+          item_type: ["玻璃"]
+        },
+        {
+          item_src: "../img/dk3.jpg",
+          item_name: "家具装饰品",
+          item_text: "手工家具装饰品",
+          item_price: "29",
+          item_designer: "王明",
+          item_type: ["手工"]
+        },
       ],
       carouselImgSrc:[
         {img_src:"../../img/lb1.png",item_text:'帕加尼 Huayra BC Roadster 巅峰制造。',item_href:"#"},
@@ -99,6 +139,7 @@ export default {
   components: {
     itemOne,
     itemTwo,
+    itemThr,
     carousel,
     titleText,
     bottom
@@ -109,7 +150,6 @@ export default {
 body{
   margin: 0;
   padding: 0;
-  width: 100%;
   -webkit-user-select: none;
   overflow-x: hidden;
 }
@@ -129,5 +169,12 @@ body{
 .bottom{
   display: flex;
   width: 100%;
+  margin-top: 10%;
 }
+#titleFour{
+  display: flex;
+  width: 80%;
+  height: 300px;
+}
+
 </style>

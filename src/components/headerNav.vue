@@ -3,9 +3,10 @@
     <div class="user-login">
       <div class="sigin">
         <a href="#titleOne">最新上线</a>
-        <a href="#">生活艺术</a>
-        <a href="#">时尚艺术</a>
-        <a href="#">联系我们</a>
+        <a href="#">刺绣</a>
+        <a href="#">雕刻</a>
+        <a href="#">玉石</a>
+        <a href="#">瓷器</a>
         <a href="login.html">Login</a>
         <a href="regist.html">Register</a>
       </div>

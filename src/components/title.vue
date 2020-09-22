@@ -32,6 +32,7 @@ export default {
   font-size: 3rem;
   font-weight: 800;
 }
+
 .title-div {
   display: flex;
   flex-direction: row;
@@ -39,13 +40,17 @@ export default {
 }
 .title-text {
   position: relative;
-  margin: 0px 100px 0px 15px;
+  margin: 0px 20px 0px 15px;
+  min-width: 4em;
 }
 .title-more{
   position: relative;
   float: right;
 }
 .title-textDetails{
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
+  margin-right: 20px;
 }
 </style>
