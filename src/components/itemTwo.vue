@@ -1,10 +1,10 @@
 <template>
   <div class="itemTwo">
     <div class="itemTwo-main">
-      <el-image class="itemTwo-main-img" :src="itemTwo_data[0].item_src" :alt="itemTwo_data[0].item_name" fit="cover"></el-image>
+      <el-image class="itemTwo-main-img" :src="itemTwo_main_Data[0].item_src" :alt="itemTwo_main_Data[0].item_title" fit="cover"></el-image>
       <div class="itemTwo-main-text">
-        <p><i class="el-icon-star-off"></i> 塔索尔桥免费游活动</p>
-        <p>填写信息即可免费体验‘ 塔索尔桥 ’晚间游！</p>
+        <p><i class="el-icon-star-off"></i> {{itemTwo_main_Data[0].item_title}}}</p>
+        <p>{{itemTwo_main_Data[0].item_text}}</p>
         <div class="itemTwo-main-text-bottom">
           <div class="itemTwo-main-text-bottom-store">
             <userUnit :userName='userUnitData[0].text'></userUnit>
@@ -15,7 +15,7 @@
     </div>
     <div id="itemTwo-right">
       <div class="itemTwo-right-unit" v-for="(unit,key) in itemTwo_data" :key="key">
-        <el-image :src="itemTwo_data.item_src" :alt="itemTwo_data.item_name" fit="cover"></el-image>
+        <el-image :src="unit.item_src" :alt="unit.item_title" fit="cover"></el-image>
       </div>
     </div>
   </div>
@@ -34,8 +34,9 @@ export default {
       ]
     };
   },
-  props: ['itemTwo_data'],
+  props: ['itemTwo_data','itemTwo_main_Data'],
   created(){
+    console.log(itemTwo_main_Data)
   },
   methods: {
   },
@@ -112,5 +113,7 @@ export default {
 }
 .itemTwo-right-unit{
   display: flex;
+  width: 20rem;
+  height: 10rem;
 }
 </style>
