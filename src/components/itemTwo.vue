@@ -2,6 +2,16 @@
   <div class="itemTwo">
     <div class="itemTwo-main">
       <el-image class="itemTwo-main-img" :src="itemTwo_data[0].item_src" :alt="itemTwo_data[0].item_name" fit="cover"></el-image>
+      <div class="itemTwo-main-text">
+        <p><i class="el-icon-star-off"></i> 塔索尔桥免费游活动</p>
+        <p>填写信息即可免费体验‘ 塔索尔桥 ’晚间游！</p>
+        <div class="itemTwo-main-text-bottom">
+          <div class="itemTwo-main-text-bottom-store">
+            <userUnit :userName='userUnitData[0].text'></userUnit>
+          </div>
+          <el-button type="primary" icon="el-icon-thumb" plain class="itemTwo-main-text-bottom-btn">参与活动</el-button>
+        </div>
+      </div>
     </div>
     <div id="itemTwo-right">
       <div class="itemTwo-right-unit" v-for="(unit,key) in itemTwo_data" :key="key">
@@ -12,12 +22,16 @@
 </template>
 <script>
 // 1. 先引入子组件
+import userUnit from './userUnit';
 export default {
   name: "itemTwo",
   data() {
     return {
-      arr:['qiaozhi','zuofei','liming','xiena'],
-      age:['16','11','12','22']
+      userUnitData:[
+        {head_src:'',text:'德国钟周建筑'},
+        {head_src:'',text:'现代石器行'},
+        {head_src:'',text:'现代石器行'},
+      ]
     };
   },
   props: ['itemTwo_data'],
@@ -30,6 +44,9 @@ export default {
       this.index = this.index + this.xun;
       return this.index;
     }
+  },
+  components:{
+    userUnit,
   }
 };
 </script>
@@ -52,6 +69,43 @@ export default {
   border: 0px;
   border-radius: 3rem;
   overflow: hidden;
+  position: relative;
+}
+.itemTwo-main-text{
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  bottom:0;
+  background: rgba(0,0,0,0.5);
+  min-height: 56px;
+  height: 30%;
+  width: 100%;
+}
+.itemTwo-main-text:first-line {
+  color: brown;
+  text-indent: 5%;
+}
+.itemTwo-main-text p:nth-child(2){
+  display: flex;
+  font-size: 1.7rem;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.itemTwo-main-text-bottom{
+  display: flex;
+  flex-direction: row;
+}
+.itemTwo-main-text-bottom-btn {
+  margin-left: 20px;
+  color: white !important;
+  display: flex;
+  align-items: center;
+}
+.itemTwo-main-text-bottom-btn i{
+  font-size: 2rem;
+  
 }
 .itemTwo-right{
   display: flex;
