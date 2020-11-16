@@ -4,7 +4,7 @@
     <titleText :title_text="title_textArr[0]" id="titleOne"></titleText>
     <itemOne :itemOne_data="itemOne_data" id="itemOne"></itemOne>
     <titleText :title_text="title_textArr[1]" id="titleTwo"></titleText>
-    <itemTwo :itemTwo_data="itemTwo_data" id="itemTwo" :itemTwo_main_Data='itemTwo_main_Data'></itemTwo>
+    <itemTwo :itemTwo_data="itemTwo_data" id="itemTwo"></itemTwo>
     <titleText :title_text="title_textArr[2]" id="titleThr"></titleText>
     <itemThr :itemThr_data="itemThr_data" id="itemThr"></itemThr>
     <bottom class="bottom"></bottom>
@@ -63,39 +63,50 @@ export default {
           item_type: ["木雕","挂饰"]
         }
       ],
-      itemTwo_main_Data:[
-        {
-          item_src: "../img/hd3.jpg",
-          item_title: "塔索尔桥免费游活动",
-          item_text: "填写信息即可免费体验‘ 塔索尔桥 ’晚间游！",
-          item_price: "298",
-          item_designer: "王明",
-        },
-      ],
-      itemTwo_data:[
-        
-        {
-          item_src: "../img/hd1.jpg",
-          item_name: "贵族纹路",
-          item_text: "稳重中透露贵气",
-          item_price: "298",
-          item_designer: "王明",
-        },
-        {
-          item_src: "../img/hd2.jpg",
-          item_name: "花",
-          item_text: "采用多次绘制 色彩鲜丽动人",
-          item_price: "298",
-          item_designer: "王明",
-        },
-        {
-          item_src: "../img/hd4.jpg",
-          item_name: "花",
-          item_text: "采用多次绘制 色彩鲜丽动人",
-          item_price: "298",
-          item_designer: "王明",
-        }
-      ],
+      itemTwo_data:{
+        main:[
+          {
+            item_src: "../img/hd2.jpg",
+            item_title: "戒成艺术 品味精致",
+            item_text: "幸福天涯，7日限时秒杀",
+            item_user: {
+              head_src:'',
+              text:'罗曼·希尔德工作室'
+            }
+          },
+        ],
+        left:[
+          {
+            item_src: "../img/it9.jpg",
+            item_name: "鼓珠",
+            item_text: "新款鼓珠上市啦",
+            item_user: {
+              head_src:'',
+              text:'凤凰珠宝'
+            }
+          },
+        ],
+        right:[
+          {
+            item_src: "../img/hd1.jpg",
+            item_name: "钻戒",
+            item_text: "新款钻戒上市啦",
+            item_user: {
+              head_src:'',
+              text:'凤凰珠宝'
+            }
+          },
+          {
+            item_src: "../img/hd4.jpg",
+            item_name: "情侣手镯",
+            item_text: "情人节快要来了 不选一个礼物送给心爱的她（他）吗？",
+            item_user: {
+              head_src:'',
+              text:'海逸手工'
+            }
+          }
+        ],
+      },
       itemThr_data: [
         {
           item_src: "../img/dk1.jpg",

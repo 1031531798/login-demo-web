@@ -90,6 +90,7 @@
     flex-direction: column;
     position: relative;
     word-wrap:normal;
+    padding-left: 10px;
 }
 .itemOne-text{
     display: flex;
