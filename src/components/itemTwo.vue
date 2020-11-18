@@ -2,9 +2,6 @@
   <div class="itemTwo">
     <div class="itemTwo-main">
       <el-image class="itemTwo-main-img" :src="itemTwo_data.main[0].item_src" :alt="itemTwo_data.main[0].item_title" fit="cover"></el-image>
-      <!-- <div class="itemTwo-main-title">
-        <p><i class="el-icon-star-off"></i> {{itemTwo_data.main[0].item_title}}</p>
-      </div> -->
       <shade class="itemTwo-shabe">
         <div slot="header" class="itemTwo-shabe-title">
           {{itemTwo_data.main[0].item_text}}
@@ -20,7 +17,7 @@
     </div>
     <div class="itemTwo-center">
       <div class="itemTwo-center-left">
-        <el-imahe :src="itemTwo_data.left[0].item_src" :alt="itemTwo_data.left[0].item_title" fit="cover"></el-imahe>
+        <el-image :src="itemTwo_data.left[0].item_src" :alt="itemTwo_data.left[0].item_title" fit="scale-down"></el-image>
       </div>
       <div class="itemTwo-center-right" >
         <div v-for="(unit,key) in itemTwo_data.right" :key="key">
@@ -155,14 +152,13 @@ export default {
 .itemTwo-center{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   width: 100%;
   margin-top: 20px;
   position: relative;
 }
 .itemTwo-center-left{
   width: 40%;
-  height: 30rem;
+  height: 40rem;
   border: 0px;
 }
 .itemTwo-center-right{
